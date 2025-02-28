@@ -64,3 +64,99 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+# Instalación proyecto laravel
+1-laravel new proyecto
+Breeze
+Blade
+no
+1
+mysql
+yes
+
+## Subir proyecto a github
+1-git init
+2-git add *
+3-git commit -m "mi primer commit"
+4-git branch -M main
+5-git remote add origin https://github.com/miguelgilp8/Laravel_crud.git
+6-push -u origin main
+
+### instalar daisy
+
+npm i -D daisyui@latest
+
+### configurar acceso base de datos
+1-crear docker-compose.yaml
+2-rellenar con:
+services:
+mysql:
+image: mysql
+volumes:
+- mysql:/var/lib/mysql
+environment:
+- MYSQL_USER=${DB_USERNAME}
+- MYSQL_PASSWORD=${DB_PASSWORD}
+- MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+- MYSQL_DATABASE=${DB_DATABASE}
+ports:
+- ${DB_PORT}:3306
+phpmyadmin:
+image: phpmyadmin
+environment:
+- PMA_ARBITRARY=1
+- PMA_HOST=mysql
+depends_on:
+- mysql
+ports:
+- 8100:80
+volumes:
+mysql:
+
+3-modificar el archivo .env
+DB_PORT=23306
+DB_DATABASE=laravel_crud
+DB_USERNAME=alumno
+DB_PASSWORD=alumno
+DB_ROOT_PASSWORD=root12345
+
+
+### Crear el layout principal
+1. Instalar el gestor de paquetes npm
+   (npm install)
+2. Instalar componente daisy (instalado anteriormente)
+3. Configurar archivo tailwind.config.js para poder usar daisy
+-Añadir plugins: [forms, require("daisyui")],
+4. Crear la vista principal main.blade.php en /views. 
+5. Crear un controlador con php artisan make:controller MainController y poner una funcion para redirigir a esta vista.
+6. Desde web.php crear la ruta para redirigir con /index al controlador y que ejecute la funcion
+
+
+### Crear login con breeze
+
+
+
+
+
+
+
+
+
+
+
+
+
+4-npm install
+
+5- php artisan migrate php artisan serve
+
+layout= plantilla para las demas paginas
+
+6-php artisan make:model Proyecto -all 
+crear clases para crud
+pagina 22 migraciones
+
+
+
+
