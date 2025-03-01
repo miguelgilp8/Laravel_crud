@@ -134,7 +134,12 @@ DB_ROOT_PASSWORD=root12345
 
 
 ### Crear login con breeze
+1. Dar estilo al layout principal, a los complementarios (header, footer ...) y a la pagina principal.
+2. Crear los botones del login y del register y hacer mediante el @auth que si el usuario esta logeado le aparezca un boton de logout e su lugar
+3. Modificar la vista del register y del login dentro de auth.
+4. Desde los controladores de AuthenticatedSessionController y de RegisteredUserCotroller modificamos la ruta que te redirige el login, register y logout para que vayan a la pagina de main, para el login y el register utilizamos un name previamente definido en web.php
 
+## Crear CRUD
 
 
 
