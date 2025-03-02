@@ -135,7 +135,22 @@ Lo que vamos a hacer ahora es configurar las clases del seeder para asi obtener 
 
 -Ahora en la de Proyecto ponemos que acceda al factory y lo cree 3 veces.
 
--Por ultimo con el comando *php artisan migrate:fresh --seed* nos encargamos de refrecar toda la base de datos y con esto añadir lo que hemos especificado en el seeder.
+-Por ultimo con el comando *php artisan migrate:fresh --seed* nos encargamos de refrescar toda la base de datos y con esto añadir lo que hemos especificado en el seeder.
+
+6. Modificar Modelo
+
+
+### Los Metodos
+
+1. Index(): Listar todos los proyectos
+-Dentro del controller del proyecto, hacemos una funcion que devuelva las filas y las columnas de la tabla de la base de datos, excluyendo el created_at y updated_at y por ultimo devolviendo la ruta de la vista proyectos.listado.
+
+-Ahora toca crear esta vista, gracias a 2 bucles podemos crear la tabla con los proyectos y sus campos.
+
+-En web.php creamos una ruta que acceda al metodo index() del controlador de proyectos y le ponemos un name.
+
+-Despues creamos un boton en el main (dentro de @auth) para acceder a esta ruta, por lo tanto a esta vista.
+
 
 
 

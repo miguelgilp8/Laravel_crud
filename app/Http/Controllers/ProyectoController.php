@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Proyecto;
 use App\Http\Requests\StoreProyectoRequest;
 use App\Http\Requests\UpdateProyectoRequest;
+use Illuminate\Support\Facades\Schema;
 
 class ProyectoController extends Controller
 {
@@ -13,6 +14,11 @@ class ProyectoController extends Controller
      */
     public function index()
     {
+        $campos = Schema::getColumnListing('proyectos');
+        $exclude =["created_at","updated_at"];
+        $campos = array_diff($campos,$exclude);
+        $filas = Proyecto::select($campos)->get();
+        return view('proyectos.listado',compact('filas',"campos"));
         //
     }
 

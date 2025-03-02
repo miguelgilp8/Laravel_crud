@@ -1,12 +1,17 @@
 <?php
-
+use App\Http\Controllers\ProyectoController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 
 Route::get('/', [MainController::class, 'index'])->name('main');
 
-Route::get("index",[MainController::class,'index']);
+Route::get('proyectos', [ProyectoController::class, 'index'])
+    ->middleware('auth') ->name('proyectos');
+
+
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
