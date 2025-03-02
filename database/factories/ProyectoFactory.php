@@ -14,10 +14,14 @@ class ProyectoFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
+
     public function definition(): array
     {
         return [
-            //
+            'titulo' => $this->faker-> sentence(3),
+            'horas_previstas' =>$this->faker->numberBetween(1,50),
+            'f_comienzo' => $this->faker->date(),
         ];
     }
 }

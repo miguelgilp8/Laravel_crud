@@ -110,8 +110,35 @@ Con el comando php artisan make:model Proyecto --all creamos todas las clases ne
 -Las funciones son las de up() (se ejecuta cuando hacemos la migracion) y la de down(se ejecuta al deshacer la migracion).
 La funcion de up contiene el metodo id() que crea un campo clave auntoincremental y el meteodo timestamps() que crea el campo updated_at y created_at que muestra cuando se ha creado o actualizado la tabla.
 
+-Ahora hay que añadir nuestros campos indicando primero el tipo de campo que es (string,integer...)
+
+-Una vez creado ejecutamos el comando php artisan migrate para que se cree la tabla.
+
 3. Añadir campos a la tabla
--De momento no tenemos campos en nuestra tabla po lo tanto hay que añadir: titulo(string), horas_previstas(integer), fecha_comienzo(date).
+-De momento no hace falta, pero si quisieramos añadir campos habria que hacer lo siguiente.
+
+Lo vamos a hacer utilizando las migration con el siguiente comando php artisan make:migration add_*nombre del campo* --table=proyectos.
+
+-Esto lo que hace es crear una nueva clase en migrations cuya función es hacer modificaciones a la tabla.
+
+-Dentro de esta clase ponemos el/los campo que queramos añadir.
+
+4. Crear valores
+-Dentro del factorie devolvemos valores falsos gracias al atributo del factory faker();
+
+-En config/app.php podemos modificar la linea *'faker_locale' => 'es_ES'* para cambiar el idioma a español
+
+5. El seeder
+Lo que vamos a hacer ahora es configurar las clases del seeder para asi obtener los datos del factory e insertarlos en la base de datos.
+
+-Primero modificamos la clase DatabaseSeeder.php y le decimos que llame a la de ProyectoSeeder.php
+
+-Ahora en la de Proyecto ponemos que acceda al factory y lo cree 3 veces.
+
+-Por ultimo con el comando *php artisan migrate:fresh --seed* nos encargamos de refrecar toda la base de datos y con esto añadir lo que hemos especificado en el seeder.
+
+
+
 
 
 
