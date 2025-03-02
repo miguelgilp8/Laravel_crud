@@ -6,7 +6,7 @@
 
     @endauth
     @guest
-            <h1 class="font-serif text-3xl text-white">Bienvenido/a </h1>
+            <h1 class="font-serif text-3xl text-white">Esta es mi web :) </h1>
         @endguest
 </div>
 </x-layouts.layout>
