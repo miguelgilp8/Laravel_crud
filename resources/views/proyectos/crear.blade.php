@@ -53,8 +53,8 @@
                 </div>
 
                 <div class="p-2">
-                    <button class= "btn btn-sm btn-success"  type="submit">Guardar </button>
-                    <a class= "btn btn-sm btn-success" href="{{route("proyectos.index")}}">Cancelar</a>
+                    <button type="submit" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg">Guardar</button>
+                    <a href="{{route("proyectos.index")}}" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg">Cancelar</a>
                 </div>
             </div>
         </form>

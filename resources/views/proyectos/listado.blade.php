@@ -19,9 +19,10 @@
     @endif
 
     <div class="max-h-full overflow-x-auto">
-
-        <a class="btn btn-sm btn-secondary " href="{{route("proyectos.create")}}">Crear proyecto</a>
-        <a class="btn btn-sm btn-secondary " href="{{route("main")}}">Home</a>
+        <div class="flex items-center gap-4 mb-4">
+            <a href="{{route("proyectos.create")}}" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg">Crear proyecto</a>
+            <a href="{{route("main")}}" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg">Home</a>
+        </div>
 
         <table class="table table-xs table-pin-rows table-pin-cols">
             <thead>

@@ -201,6 +201,11 @@ Lo que vamos a hacer ahora es configurar las clases del seeder para asi obtener 
 
 -Ahora vamos a crear un middleware para que al hacer cualquier accion coja como idioma el que tendremos almacenado en una varieble de sesion. Para crear el middleware lo hacemos a traves de este comando *php artisan make:middleware LanguageMiddleware*
 
+-Este middleware lo que hace es que si ya hay un locale en session se pone en la aplicacion el locale actual de la session, si no pone en la session el locale actual de la applicacion
+
+-Ahora en /bostrap app.php ponemos que use este middleware
+
+-Hacemos un controller con *php artisan make:controller LanguageController*
 
 
 

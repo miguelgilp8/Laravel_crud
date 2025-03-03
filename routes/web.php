@@ -3,6 +3,7 @@ use App\Http\Controllers\ProyectoController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\LanguageController;
 
 Route::get('/', [MainController::class, 'index'])->name('main');
 
@@ -21,4 +22,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+require __DIR__.'/auth.php';
+
+Route::get("lang/{language}", LanguageController::class)->name('language');
 require __DIR__.'/auth.php';
