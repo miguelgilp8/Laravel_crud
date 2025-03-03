@@ -184,13 +184,22 @@ Lo que vamos a hacer ahora es configurar las clases del seeder para asi obtener 
 ## Cambiar Idiomas
 
 ### Instalar paquete 
-
+1.
 -Con el comando *composer require laravel-lang/lang* instalamos el paquete de lenguaje.
 
 -Ahora con el comando *php artisan lang:publish* publicamos los idiomas
 
 -Para instalar el idioma es, en, it *php artisan lang:add es*x3
 
+2. Desde el fichero .env ponemos el idioma en ingles ya que es el idioma base de las traducciones
+
+### Realizar la aplicacion de traduccion
+
+-Creamos un layout nuevo que nos servira de base para crear un elemento (un desplegable) que sirva para seleccionar los idiomas
+
+-Ahora creamos en /config un archivo languages.php donde dentro especificamos un return con los idiomas y sus banderas.
+
+-Ahora vamos a crear un middleware para que al hacer cualquier accion coja como idioma el que tendremos almacenado en una varieble de sesion. Para crear el middleware lo hacemos a traves de este comando *php artisan make:middleware LanguageMiddleware*
 
 
 
