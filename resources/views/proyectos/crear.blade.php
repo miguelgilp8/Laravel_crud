@@ -1,4 +1,4 @@
-<x-layouts.layout titulo="crear">
+<x-layouts.layout titulo="Crear Proyecto">
     <div class="flex flex-row justify-center items-center min-h-full bg-gray-300">
         <!-- Session Status -->
 

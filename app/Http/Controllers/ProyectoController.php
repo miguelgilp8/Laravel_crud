@@ -48,7 +48,7 @@ class ProyectoController extends Controller
      */
     public function show(Proyecto $proyecto)
     {
-        //
+
     }
 
     /**
@@ -56,7 +56,7 @@ class ProyectoController extends Controller
      */
     public function edit(Proyecto $proyecto)
     {
-        //
+        return view('proyectos.editar',compact('proyecto'));
     }
 
     /**
@@ -64,7 +64,9 @@ class ProyectoController extends Controller
      */
     public function update(UpdateProyectoRequest $request, Proyecto $proyecto)
     {
-        //
+        $proyecto->update($request->input());
+        session()->flash("mensaje","Proyecto $proyecto->titulo actualizado");
+        return redirect()->route('proyectos.index');
     }
 
     /**
@@ -72,6 +74,8 @@ class ProyectoController extends Controller
      */
     public function destroy(Proyecto $proyecto)
     {
-        //
+        $proyecto->delete();
+        session()->flash("mensaje","Alumno $proyecto->titulo eliminado");
+        return redirect()->route('proyectos.index');
     }
 }

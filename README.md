@@ -167,7 +167,31 @@ Lo que vamos a hacer ahora es configurar las clases del seeder para asi obtener 
 
 -Por ultimo creamos un mensaje de que el proyecto ha sido creado correctamente en la clase de listado, esto lo hacemos mediante una session que guarda desde el metodo store() un mesaje diciendo que el proyecto ha sido creado. Gracias a un if en la vista crear de que la session existe podemos mostrarla.
 
-### E
+### Editar un proyecto
+-Esta accion es muy parecida a la de crear, vamos a tener que modificar la clase de ProyectoController, la vista de listado y crear una nueva vista llamada editar.
+
+-Primero en la clase listado añadimos un boton al lado de cada proyecto que redirigira al metodo de editar devolviendo tambien el id de la fila en la que se encuentra.
+
+-Dentro de controller modificamos la funcion de edit, esta recogera el id que le hemos dado anterior mente y nos enviara a la vista editar, el id lo añadira en la ruta de la vista.
+
+-En la vista de editar basicamente tenemos que copiar la vista de crear pero modificando en ella que los valores por defecto de los input pertenezcan al del proyecto que estamos editando.
+
+
+### Borrar un proyecto
+-Este metodo es el mas simple, modificamos la vista listado y el metodo destroy() del controller de proyecto.
+
+
+## Cambiar Idiomas
+
+### Instalar paquete 
+
+-Con el comando *composer require laravel-lang/lang* instalamos el paquete de lenguaje.
+
+-Ahora con el comando *php artisan lang:publish* publicamos los idiomas
+
+-Para instalar el idioma es, en, it *php artisan lang:add es*x3
+
+
 
 
 
