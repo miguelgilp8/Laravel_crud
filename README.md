@@ -152,6 +152,24 @@ Lo que vamos a hacer ahora es configurar las clases del seeder para asi obtener 
 -Despues creamos un boton en el main (dentro de @auth) para acceder a esta ruta, por lo tanto a esta vista.
 
 
+2. Create(): Crear un proyecto
+-Para crear un proyecto hay que modificar varias clases como la de listado.blade.php, ProyectoController.php, Store, UpdateProyectoRequest.php y crear una vista llamada crear.blade.php dentro de proyectos.
+
+-Primero en la vista de listado crear un botón para dirigir a la vista de crear el proyecto.
+
+-Despues en la vista de crear tenemos que hacer el formulario, en cada campo ponemos el valor de name para que corresponda con el de la tabla de la base de datos. Tambien ponemos el metodo old para que si hay un error el campo no se vacie. Tambien ponemos un campo para mostrar los errores que previamente definimos en la clase store.
+
+-En el modelo tenemos que definir los campos que se introducirar desde el formulario.
+
+-En la clase store y update tenemos que devolver el valor true.
+
+-Dentro del controller de proyecto en el metodo create() simplemente tenemos que devolver la vista del crear, y en el metodo store especificamos los campos que va a recoger y redirigimos a el metodo index de esa misma clase.
+
+-Por ultimo creamos un mensaje de que el proyecto ha sido creado correctamente en la clase de listado, esto lo hacemos mediante una session que guarda desde el metodo store() un mesaje diciendo que el proyecto ha sido creado. Gracias a un if en la vista crear de que la session existe podemos mostrarla.
+
+### E
+
+
 
 
 

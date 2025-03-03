@@ -6,10 +6,8 @@ use App\Http\Controllers\MainController;
 
 Route::get('/', [MainController::class, 'index'])->name('main');
 
-Route::get('proyectos', [ProyectoController::class, 'index'])
-    ->middleware('auth') ->name('proyectos');
-
-
+Route::resource('proyectos', ProyectoController::class)
+    ->middleware('auth');
 
 
 

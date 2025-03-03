@@ -11,6 +11,7 @@
                         Logout
                     </button>
                 </form>
+                <a class="btn btn-sm btn-secondary " href="{{route("main")}}">Home</a>
             @endauth
             @guest
                 <a href="{{ route('login') }}" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg">
@@ -19,6 +20,7 @@
                 <a href="{{ route('register') }}" class="px-4 py-2 bg-[#9c9d9f] hover:bg-gray-400 text-white rounded-lg">
                     Register
                 </a>
+                    <a class="btn btn-sm btn-secondary " href="{{route("main")}}">Home</a>
                 @endguest
         </div>
     </div>
