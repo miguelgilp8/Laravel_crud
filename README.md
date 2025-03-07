@@ -207,6 +207,22 @@ Lo que vamos a hacer ahora es configurar las clases del seeder para asi obtener 
 
 -Hacemos un controller con *php artisan make:controller LanguageController*
 
+-Ahora para poder traducir un texto tendremos que poner *__("texto")* y en los documentos .json de los idiomas crear cada traduccion.
+
+
+## Crear confirmación en borrar
+
+Vamos a usar la libreria sweet alert de js.
+
+- Instalamos el paquete con *npm install sweetalert --save*
+
+- incluimos la librería en app.js
+
+- En el header del layout principal incluimos la siguiente linea *@vite (["resources/css/app.css","resources/js/app.js"])* para incluir el js
+
+-Ponemos en el boton de borrar que llame a la funcion.
+
+-Debajo creamos la funcion, cambiamos que el boton sea tipo boton y no submit para que no envíe automaticamente el formulario. En la funcion ponemos que recoja en event y lo ponemos como event.prevent default para evitar que se envie automaticamente cuando haces click.
 
 
 
@@ -215,7 +231,11 @@ Lo que vamos a hacer ahora es configurar las clases del seeder para asi obtener 
 
 
 
-    
+
+
+
+
+
 
 
 

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{$titulo ??""}}</title>
     @vite (["resources/css/app.css","resources/js/app.js"])
+
 </head>
 <body class="h-screen flex flex-col">
 <div class="h-[25%]">
